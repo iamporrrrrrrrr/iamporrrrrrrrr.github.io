@@ -24,14 +24,17 @@
                     console.log(count);
                     count++;
             }
-            // $(document).ready(function(){
-            //     console.log("ready");
-            // });
+            $(document).ready(function(){
+                console.log("ready");
+            });
             function increase(){
                 $("#counter").text(parseInt($("#counter").text())+1);
             }
             function decrease(){
                 $("#counter").text(parseInt($("#counter").text())-1);
+            }
+            function reset(){
+                $("#counter").text("0");
             }
             alert("This is in script");
             
@@ -40,10 +43,11 @@
             <button onclick = "alert(count)"class = "btn btn-primary">button</button>
             <button onclick = "console.log('hi')"class = "btn btn-primary">button</button>
             <h1 onclick = "shownum()">click me!</h1>
-        <div class="d-flex flex-column justify content-center allign-items-center mt-4">
+        <div class="d-flex flex-column justify-content-center align-items-center mt-4">
             <h2 id="counter">0</h2>
             <div>
             <button onclick = "increase()"class = "btn btn-primary">+1</button>
+            <button onclick = "reset()"class = "btn btn-primary">reset</button>
             <button onclick = "decrease()"class = "btn btn-primary">-1</button>
         </div>
         </div>
